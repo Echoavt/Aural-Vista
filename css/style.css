@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.dark body {
+    background: linear-gradient(135deg, #0f2027, #203a43);
+}
+
+.panel {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(6px);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.panel label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.panel input {
+    margin-top: 0.25rem;
+    padding: 0.25rem;
+    background: rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 4px;
+    color: #222;
+    font-weight: 400;
+}
+
+.panel button {
+    padding: 0.5rem 1rem;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.panel button:hover {
+    background: #1d4ed8;
+}
+
+.flex-fill {
+    flex: 1;
+    position: relative;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #0f2027, #203a43);
+        color: #e0e0e0;
+    }
+    .panel {
+        background: rgba(0,0,0,0.3);
+    }
+    .panel input {
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+    }
+}
