@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aural Vista - 3D Akustický Simulátor</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta property="og:title" content="Aural Vista">
+    <meta property="og:description" content="Interaktivní 3D akustický simulátor v prohlížeči">
+    <meta property="og:image" content="https://placeholder.com/aural-vista-preview.jpg">
+</head>
+<body>
+    <div id="control-panel" class="panel">
+        <label>Šířka X [m]
+            <input id="dim-x" type="number" min="1" step="0.1" value="5" title="Šířka místnosti v metrech">
+        </label>
+        <label>Výška Y [m]
+            <input id="dim-y" type="number" min="1" step="0.1" value="3" title="Výška místnosti v metrech">
+        </label>
+        <label>Hloubka Z [m]
+            <input id="dim-z" type="number" min="1" step="0.1" value="5" title="Hloubka místnosti v metrech">
+        </label>
+        <button id="render-btn">Renderovat scénu</button>
+    </div>
+    <div id="canvas-container" class="flex-fill">
+        <!-- Three.js canvas injected here -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.163/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.163/examples/js/controls/OrbitControls.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
